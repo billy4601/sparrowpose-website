@@ -156,6 +156,17 @@ a.glass-dark:hover { background: rgba(255, 255, 255, .2); }
 .plan-cur { margin-right: calc(var(--sp) / 6); font-size: var(--fs); }
 .plans-note { display: flex; align-items: center; gap: calc(var(--sp) / 2); margin-top: var(--sp); padding: 0 var(--pad-band); }
 
+/* Quotes: same grid and tokens as plans */
+.quotes-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: calc(var(--sp) / 2) var(--sp); margin: var(--gap-near) 0 var(--sp); padding: 0 var(--pad-band); }
+.quotes-title { font-size: calc(var(--fs-chapter) * .4); font-weight: var(--w-display); }
+.quotes-meta { color: var(--body); }
+.quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: var(--sp); }
+.quote { display: flex; flex-direction: column; gap: var(--sp); margin: 0; padding: var(--pad-band); border-radius: var(--r-card); background: var(--card); box-shadow: 0 2px 12px rgba(11, 79, 85, .05); }
+.quote blockquote { margin: 0; font-size: var(--fs-sub); line-height: 1.6; }
+.quote blockquote::before { content: "「"; } .quote blockquote::after { content: "」"; }
+.quote figcaption { margin-top: auto; color: var(--body); }
+.quote figcaption::before { content: "— "; }
+
 /* 404 */
 .hero-brand { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: calc(var(--sp) * .4); font-size: calc(var(--fs-chapter) * .5); font-weight: var(--w-strong); letter-spacing: .1em; }
 .hero-brand .brand-en { font-size: var(--fs-sub); font-weight: var(--w-display); }
@@ -182,6 +193,7 @@ a.glass-dark:hover { background: rgba(255, 255, 255, .2); }
   .plans { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 900px) {
+  .quotes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   :root { --h-band: 460px; }
   .split, .split--flip { grid-template-columns: 1fr; }
   .split--flip .panel, .split--flip .map { order: -1; }
@@ -189,6 +201,7 @@ a.glass-dark:hover { background: rgba(255, 255, 255, .2); }
   .panel, .map, .map iframe { min-height: var(--h-panel-stack); }
 }
 @media (max-width: 640px) {
+  .quotes { grid-template-columns: 1fr; }
   .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .plan:last-child:nth-child(odd) { grid-column: 1 / -1; }
   :root { --inset: 16px; --sp: 16px; --h-band: 420px; --r-band: 32px; --fs: 16px; --display: .6; --gap-far: calc(var(--sp) * 7); }
