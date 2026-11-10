@@ -225,10 +225,12 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
   .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .plan:last-child:nth-child(odd) { grid-column: 1 / -1; }
   :root { --inset: 16px; --sp: 16px; --h-band: 460px; --r-band: 32px; --fs: 16px; --display: .6; --gap-far: calc(var(--sp) * 7); }
-  .signature-lines { display: none; }
   .bar-slogan { letter-spacing: .06em; }
   .info > div { grid-template-columns: 1fr; min-height: var(--h-row-stack); }
   .btns { flex-direction: column; align-items: stretch; width: 100%; max-width: calc(var(--sp) * 20); }
+}
+@media (max-width: 400px) {
+  .bar-slogan { white-space: normal; word-break: keep-all; text-align: right; line-height: 1.35; }  /* slogan wraps at its comma so the founder lines always fit */
 }
 @media (max-width: 380px) {
   .sub, .quote blockquote { font-size: var(--fs); }
