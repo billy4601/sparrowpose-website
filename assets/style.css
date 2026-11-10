@@ -113,7 +113,7 @@ a.glass-dark:hover { background: rgba(255, 255, 255, .2); }
 .sub--slogan { font-size: var(--fs-slogan); font-weight: var(--w-display); letter-spacing: .14em; }
 /* Line breaks follow meaning: phrases never split; headlines balance their lines. */
 .phrase { display: inline-block; }
-.chapter, .sub { text-wrap: balance; }
+.chapter, .sub, .motto, .quote blockquote, .plan-tag { text-wrap: balance; word-break: keep-all; overflow-wrap: anywhere; }  /* CJK breaks only at punctuation and spaces */
 .mark { font-style: normal; font-weight: var(--w-strong); margin-right: .18em; letter-spacing: 0; background: linear-gradient(transparent 58%, var(--s2) 58%, var(--s2) 92%, transparent 92%); }
 
 /* Detail areas */
@@ -212,6 +212,7 @@ a.glass-dark:hover { background: rgba(255, 255, 255, .2); }
   .btns { flex-direction: column; align-items: stretch; width: 100%; max-width: calc(var(--sp) * 20); }
 }
 @media (max-width: 380px) {
+  .sub, .quote blockquote { font-size: var(--fs); }
   .plans { grid-template-columns: 1fr; }
   :root { --h-band: 460px; }
   .bar-slogan { letter-spacing: .02em; }
