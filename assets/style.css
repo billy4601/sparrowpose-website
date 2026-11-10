@@ -109,6 +109,7 @@ a.glass-dark:hover { background: rgba(255, 255, 255, .2); }
 .chapter { margin-top: calc(var(--sp) / 2); font-size: var(--fs-chapter); font-weight: var(--w-display); line-height: 1.15; letter-spacing: 0; }
 .chapter--name { letter-spacing: .14em; margin-right: -.14em; }
 .sub { margin-top: calc(var(--sp) * .84); font-size: var(--fs-sub); font-weight: 400; max-width: 26em; }
+.motto { margin-top: calc(var(--sp) / 2); font-size: var(--fs-slogan); font-weight: var(--w-display); letter-spacing: .08em; }
 .sub--slogan { font-size: var(--fs-slogan); font-weight: var(--w-display); letter-spacing: .14em; }
 /* Line breaks follow meaning: phrases never split; headlines balance their lines. */
 .phrase { display: inline-block; }
