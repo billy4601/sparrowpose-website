@@ -56,7 +56,7 @@
 
   --gap-band: var(--sp);                           /* band ↔ band, bar → hero */
   --gap-near: calc(var(--sp) * 2);                 /* band → its card */
-  --gap-far: calc(var(--sp) * 6);                  /* card → next chapter (Apple 144) */
+  --gap-far: calc(var(--sp) * 3);                  /* card → next chapter; two levels, small ratio (Billy 2026-11-10) */
   --pad-band: calc(var(--sp) * 1.34);
   --pad-card: calc(var(--sp) * 2);
   --pad-pill: calc(var(--sp) * 1.1);
@@ -233,7 +233,7 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
 @media (max-width: 640px) {
   .quotes { grid-template-columns: 1fr; }
   .plans { grid-template-columns: 1fr; }
-  :root { --inset: 16px; --sp: 16px; --h-band: 460px; --r-band: 32px; --fs: 16px; --display: .6; --gap-far: calc(var(--sp) * 7); }
+  :root { --inset: 16px; --sp: 16px; --h-band: 460px; --r-band: 32px; --fs: 16px; --display: .6; --gap-near: calc(var(--sp) * 2); --gap-far: calc(var(--sp) * 3); }
   .bar-slogan { letter-spacing: .06em; }
   .info > div { grid-template-columns: 1fr; min-height: var(--h-row-stack); }
   .btns { flex-direction: column; align-items: stretch; width: 100%; max-width: calc(var(--sp) * 20); }
