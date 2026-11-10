@@ -180,6 +180,7 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
 .quote { display: flex; flex-direction: column; gap: calc(var(--sp) * .67); margin: 0; padding: var(--pad-band); border-radius: var(--r-card); background: var(--card); box-shadow: 0 2px 12px rgba(11, 79, 85, .05); }
 .quote blockquote { margin: 0; font-size: var(--fs-sub); line-height: 1.6; }
 .quote blockquote::before { content: "「"; } .quote blockquote::after { content: "」"; }
+.quotes-more { margin-top: var(--sp); padding: 0 var(--pad-band); text-align: right; }
 .quote figcaption { margin-top: auto; color: var(--text-2); }
 .quote figcaption::before { content: "— "; }
 
