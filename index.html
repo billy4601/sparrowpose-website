@@ -8,7 +8,7 @@
   <meta name="description" content="正雀 Sparrow Pose 整復店，位於新北市三重區，完全預約制。調正姿態，昇起狀態。">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#0B4F55">
-  <link rel="stylesheet" href="assets/style.css?v=261110-12">
+  <link rel="stylesheet" href="assets/style.css?v=261110-13">
 </head>
 <body>
   <header class="site-bar">
@@ -24,7 +24,8 @@
     <p class="sub sub--slogan">調<em class="mark">正</em>姿態，<wbr><em class="mark">昇</em>起狀態</p>
     <p class="btns"><a class="pill pill-dark" href="#contact">預約與聯絡</a><a class="pill glass" href="#services">服務與價目</a></p>
     </section>
-    <!-- Apple layout (Billy 2026-11-10): chapter band (eyebrow + big centred headline) → quiet grey detail with white cards. -->
+    <!-- Apple layout (Billy 2026-11-10): every chapter = band (eyebrow + headline) → one white split card.
+         Spacing: band↔band 24px; band→its card 32/48px; card→next band 88/136px. -->
     <section class="chapter-wrap" aria-labelledby="about">
     <div class="band band--green">
     <p class="eyebrow">01 關於正雀</p>
@@ -33,9 +34,14 @@
     </div>
     <div class="detail">
     <div class="wrap">
-    <div class="card card--wide">
-    <span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5" /><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244" /><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05" /></svg></span>
-    <dl class="info"><div><dt>店家介紹</dt><dd><span class="tbd">待提供</span></dd></div></dl>
+    <div class="split">
+    <div class="panel panel--green" aria-hidden="true"><span class="disc"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5" /><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244" /><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05" /></svg></span></div>
+    <div class="split-text">
+    <dl class="info">
+    <div><dt><span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" /><path d="M20 2v4" /><path d="M22 4h-4" /><circle cx="4" cy="20" r="2" /></svg></span>店家介紹</dt><dd><span class="tbd">待提供</span></dd></div>
+    <div><dt><span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M8 2v3" /><path d="M16 2v3" /><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18" /><path d="m9 15 2 2 4-4" /></svg></span>預約制度</dt><dd>完全預約制</dd></div>
+    </dl>
+    </div>
     </div>
     </div>
     </div>
@@ -43,13 +49,12 @@
     <section class="chapter-wrap" aria-labelledby="services">
     <div class="band band--sage">
     <p class="eyebrow">02 服務項目與價目</p>
-    <p class="chapter" aria-hidden="true">服務項目<br>與價目。</p>
+    <h2 id="services" class="chapter">服務項目<br>與價目。</h2>
+    <p class="band-link"><a class="more" href="#contact">預約服務 ›</a></p>
     </div>
     <div class="detail">
     <div class="wrap">
-    <div class="head-row"><h2 id="services" class="h2">服務項目與價目。</h2><a class="more" href="#contact">預約服務 ›</a></div>
-    <div class="split">
-    <div class="panel panel--sage" aria-hidden="true"><span class="disc"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" /><path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95" /><path d="m2 15 6 6" /><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91" /></svg></span></div>
+    <div class="split split--flip">
     <div class="split-text">
     <dl class="info">
     <div><dt><span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M13 5h8" /><path d="M13 12h8" /><path d="M13 19h8" /><path d="m3 17 2 2 4-4" /><path d="m3 7 2 2 4-4" /></svg></span>服務項目</dt><dd><span class="tbd">待提供</span></dd></div>
@@ -57,6 +62,7 @@
     <div><dt><span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" /><circle cx="7.5" cy="7.5" r=".5" fill="currentColor" /></svg></span>價目</dt><dd><span class="tbd">待提供</span></dd></div>
     </dl>
     </div>
+    <div class="panel panel--sage" aria-hidden="true"><span class="disc"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" /><path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95" /><path d="m2 15 6 6" /><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91" /></svg></span></div>
     </div>
     </div>
     </div>
@@ -64,19 +70,18 @@
     <section class="chapter-wrap" aria-labelledby="owner">
     <div class="band band--warm">
     <p class="eyebrow">03 店主介紹</p>
-    <p class="chapter chapter--name" aria-hidden="true">黃正昇</p>
+    <h2 id="owner" class="chapter chapter--name">黃正昇</h2>
     </div>
     <div class="detail">
     <div class="wrap">
-    <div class="head-row"><h2 id="owner" class="h2">店主介紹。</h2></div>
-    <div class="split split--flip">
+    <div class="split">
+    <div class="panel panel--warm" aria-hidden="true"><span class="disc"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="8" r="5" /><path d="M20 21a8 8 0 0 0-16 0" /></svg></span></div>
     <div class="split-text">
     <dl class="info">
     <div><dt><span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="8" r="5" /><path d="M20 21a8 8 0 0 0-16 0" /></svg></span>店主</dt><dd>黃正昇</dd></div>
     <div><dt><span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="5" r="1" /><path d="m9 20 3-6 3 6" /><path d="m6 8 6 2 6-2" /><path d="M12 10v4" /></svg></span>介紹</dt><dd><span class="tbd">待提供</span></dd></div>
     </dl>
     </div>
-    <div class="panel panel--warm" aria-hidden="true"><span class="disc"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="8" r="5" /><path d="M20 21a8 8 0 0 0-16 0" /></svg></span></div>
     </div>
     </div>
     </div>
@@ -87,17 +92,23 @@
     <p class="sub">完全預約制，請先預約再前往。</p>
     <p class="btns"><span class="pill glass-dark"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M8 2v3" /><path d="M16 2v3" /><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18" /><path d="m9 15 2 2 4-4" /></svg>LINE 官方帳號　<span class="tbd">待提供</span></span><a class="pill glass-dark" href="tel:+886909652025"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /></svg>0909-652-025</a></p>
     </section>
-    <section class="detail" aria-labelledby="visit">
+    <section class="chapter-wrap" aria-labelledby="visit">
+    <div class="band band--lime">
+    <p class="eyebrow">05 服務時間與地址</p>
+    <h2 id="visit" class="chapter">服務時間<br>與地址。</h2>
+    <p class="band-link"><a class="more" href="https://www.google.com/maps/search/?api=1&amp;query=241%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E5%85%89%E8%88%88%E8%A1%9787%E5%B7%B73%E8%99%9F">在地圖開啟 ›</a></p>
+    </div>
+    <div class="detail">
     <div class="wrap">
-    <div class="head-row"><h2 id="visit" class="h2">服務時間與地址。</h2><a class="more" href="https://www.google.com/maps/search/?api=1&amp;query=241%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E5%85%89%E8%88%88%E8%A1%9787%E5%B7%B73%E8%99%9F">在地圖開啟 ›</a></div>
-    <div class="split">
-    <div class="map"><iframe title="正雀 Sparrow Pose 位置地圖" src="https://www.google.com/maps?q=241%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E5%85%89%E8%88%88%E8%A1%9787%E5%B7%B73%E8%99%9F&amp;hl=zh-TW&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <div class="split split--flip">
     <div class="split-text">
     <dl class="info">
-    <div><dt><span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg></span>服務時間</dt><dd><span class="tbd">待提供</span></dd></div>
+    <div><dt><span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg></span>服務時間</dt><dd>週二至週日 10:00–21:00</dd></div>
     <div><dt><span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg></span>地址</dt><dd>新北市三重區光興街 87 巷 3 號 1 樓</dd></div>
     <div><dt><span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /></svg></span>電話</dt><dd><a href="tel:+886909652025">0909-652-025</a></dd></div>
     </dl>
+    </div>
+    <div class="map"><iframe title="正雀 Sparrow Pose 位置地圖" src="https://www.google.com/maps?q=241%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E5%85%89%E8%88%88%E8%A1%9787%E5%B7%B73%E8%99%9F&amp;hl=zh-TW&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
     </div>
     </div>
