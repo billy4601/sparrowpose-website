@@ -1,6 +1,6 @@
-# SparrowPose-website：只放產生的靜態檔，不得直接修改
+# sparrowpose-website：只放產生的靜態檔，不得直接修改
 
-本 repo 是正雀 Sparrow Pose 網站的 GitHub Pages 發布用靜態輸出，由私有 repo **billy4601/SparrowPose-website-builder** 產生後同步過來。
+本 repo 是正雀 Sparrow Pose 網站的 GitHub Pages 發布用靜態輸出，由私有 repo **billy4601/sparrowpose-website-builder** 產生後同步過來。
 
 ## 規則（Billy 2026-11-10）
 

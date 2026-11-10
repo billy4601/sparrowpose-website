@@ -19,7 +19,7 @@
      Breakpoints change only the base values. */
   --inset: 24px;                                   /* base 1: page margin */
   --sp: 24px;                                      /* base 2: spacing unit */
-  --h-band: 500px;                                 /* base 3: chapter band height */
+  --h-band: 520px;                                 /* base 3: chapter band height */
   --r-band: 44px;                                  /* base 4: outer radius */
   --page: min(1232px, 100% - var(--inset) * 2);    /* one width for every block: bar, bands, cards, footer */
   --fs: 17px;                                      /* base 5: body size (Apple 17) */
@@ -175,6 +175,18 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
 .quote figcaption { margin-top: auto; color: var(--text-2); }
 .quote figcaption::before { content: "— "; }
 
+/* LINE: button everywhere; QR code only where a second device is likely (desktop) */
+.pill-line { background: var(--card); color: var(--deep); }
+.pill-line:hover { background: var(--c3); }
+.line-id { margin-top: calc(var(--sp) * .67); color: var(--text-2); }
+.contact-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--sp) calc(var(--sp) * 1.5); margin-top: calc(var(--sp) * 1.5); }
+.contact-row .btns { margin-top: 0; }
+.contact-actions { display: flex; flex-direction: column; align-items: center; }
+.qr-card { display: none; margin: 0; padding: calc(var(--sp) * .67); border-radius: var(--r-tile); background: var(--card); color: var(--deep); }
+.qr-card .qr { display: block; width: calc(var(--h-control) * 2.5); height: calc(var(--h-control) * 2.5); }
+.qr-card figcaption { margin-top: calc(var(--sp) / 3); font-size: var(--fs-small); max-width: calc(var(--h-control) * 2.5); line-height: 1.4; }
+@media (min-width: 901px) and (hover: hover) { .qr-card { display: block; } }
+
 /* 404 */
 .hero-brand { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: calc(var(--sp) * .4); font-size: calc(var(--fs-chapter) * .5); font-weight: var(--w-strong); letter-spacing: .1em; }
 .hero-brand .brand-en { font-size: var(--fs-sub); font-weight: var(--w-display); }
@@ -202,7 +214,7 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
 }
 @media (max-width: 900px) {
   .quotes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  :root { --h-band: 460px; }
+  :root { --h-band: 520px; }
   .split, .split--flip { grid-template-columns: 1fr; }
   .split--flip .panel, .split--flip .map { order: -1; }
   :root { --h-panel-stack: calc(var(--h-band) * .55); }
@@ -212,7 +224,7 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
   .quotes { grid-template-columns: 1fr; }
   .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .plan:last-child:nth-child(odd) { grid-column: 1 / -1; }
-  :root { --inset: 16px; --sp: 16px; --h-band: 420px; --r-band: 32px; --fs: 16px; --display: .6; --gap-far: calc(var(--sp) * 7); }
+  :root { --inset: 16px; --sp: 16px; --h-band: 460px; --r-band: 32px; --fs: 16px; --display: .6; --gap-far: calc(var(--sp) * 7); }
   .signature-lines { display: none; }
   .bar-slogan { letter-spacing: .06em; }
   .info > div { grid-template-columns: 1fr; min-height: var(--h-row-stack); }
@@ -221,7 +233,6 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
 @media (max-width: 380px) {
   .sub, .quote blockquote { font-size: var(--fs); }
   .plans { grid-template-columns: 1fr; }
-  :root { --h-band: 460px; }
   .bar-slogan { letter-spacing: .02em; }
 }
 @media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
