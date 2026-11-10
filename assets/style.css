@@ -232,7 +232,8 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
 .footer-brand span { white-space: nowrap; }
 .footer-disclaimer { margin-top: calc(var(--sp) * .67); font-size: var(--fs-small); line-height: 1.8; }
 .footer-disclaimer a, .footer-license a { font-weight: var(--w-strong); color: var(--green-ink); }
-.footer-license { margin-top: calc(var(--sp) / 2); font-size: var(--fs-small); color: var(--text-2); line-height: 1.7; }
+.footer-license { margin-top: calc(var(--sp) / 3); font-size: 8pt; color: var(--text-2); line-height: 1.7; }  /* fine print: 8pt by Billy 2026-11-10, the one exception to the 16px minimum */
+.footer-disclaimer + .footer-license { margin-top: var(--sp); }
 
 /* Equal card heights where cards sit side by side; stacked phone cards follow their row count. */
 @media (min-width: 641px) {
