@@ -186,6 +186,10 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
 .quote blockquote::before { content: "「"; } .quote blockquote::after { content: "」"; }
 .quotes-more { margin-top: var(--sp); padding: 0 var(--pad-band); text-align: right; }
 .quote figcaption { margin-top: auto; color: var(--text-2); }
+/* Store equipment (Billy 2026-11-10): same card, grid and heading as quotes; three cards stay in one row until phone width */
+.features-lead { margin-bottom: var(--sp); padding: 0 var(--pad-band); color: var(--text-2); }
+.feature-title { margin: 0; font-size: var(--fs-sub); font-weight: var(--w-strong); }
+.feature-text { color: var(--text-2); }
 .quote figcaption::before { content: "— "; }
 
 /* LINE: button everywhere; QR code only where a second device is likely (desktop) */
@@ -240,6 +244,7 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
 }
 @media (max-width: 900px) {
   .quotes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .features { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   :root { --h-band: 520px; }
   .split, .split--flip { grid-template-columns: 1fr; }
   .split--flip .panel, .split--flip .map { order: -1; }
@@ -249,7 +254,7 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
 @media (max-width: 640px) {
   .steps { grid-template-columns: minmax(0, 1fr); }
   .steps li { flex-direction: row; text-align: left; }
-  .quotes { grid-template-columns: 1fr; }
+  .quotes, .features { grid-template-columns: 1fr; }
   .plans { grid-template-columns: 1fr; }
   :root { --inset: 16px; --sp: 16px; --h-band: 460px; --r-band: 32px; --fs: 16px; --display: .6; --gap-near: calc(var(--sp) * 2); --gap-far: calc(var(--sp) * 3); }
   .bar-slogan { letter-spacing: .06em; }
