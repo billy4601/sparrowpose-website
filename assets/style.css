@@ -93,7 +93,8 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 .pill-dark { background: var(--deep); color: #FFFFFF; }
 .pill-dark:hover { background: var(--green-ink); }
 a.glass:hover { background: rgba(255, 255, 255, .85); }
-a.glass-dark:hover { background: rgba(255, 255, 255, .2); }
+a.glass-dark:hover, button.glass-dark:hover { background: rgba(255, 255, 255, .2); }
+button.pill { border: 0; font-family: inherit; cursor: pointer; }
 
 /* Chapter bands */
 .band { width: var(--page); margin: 0 auto; border-radius: var(--r-band); min-height: var(--h-band); padding: var(--pad-band); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
@@ -194,10 +195,15 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
 .contact-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--sp) calc(var(--sp) * 1.5); margin-top: calc(var(--sp) * 1.5); }
 .contact-row .btns { margin-top: 0; }
 .contact-actions { display: flex; flex-direction: column; align-items: center; }
-.qr-card { display: none; margin: 0; padding: calc(var(--sp) * .67); border-radius: var(--r-tile); background: var(--card); color: var(--deep); }
-.qr-card .qr { display: block; width: calc(var(--h-control) * 2.5); height: calc(var(--h-control) * 2.5); }
-.qr-card figcaption { margin-top: calc(var(--sp) / 3); font-size: var(--fs-small); max-width: calc(var(--h-control) * 2.5); line-height: 1.4; }
-@media (min-width: 901px) and (hover: hover) { .qr-card { display: block; } }
+/* LINE QR Code (Billy 2026-11-10): its own button opens a native popover (no JavaScript); desktop only, since a phone cannot scan its own screen */
+.pill-qr { display: none; }
+@media (min-width: 901px) and (hover: hover) { .pill-qr { display: inline-flex; } }
+.qr-pop { margin: auto; padding: var(--pad-card); border: 0; border-radius: var(--r-card); background: var(--card); color: var(--deep); text-align: center; box-shadow: 0 24px 64px rgba(11, 79, 85, .3); }
+.qr-pop:popover-open { display: flex; flex-direction: column; align-items: center; gap: var(--sp); }
+.qr-pop::backdrop { background: rgba(11, 79, 85, .45); }
+.qr-card { margin: 0; }
+.qr-card .qr { display: block; width: calc(var(--h-control) * 5); height: calc(var(--h-control) * 5); }
+.qr-card figcaption { margin-top: calc(var(--sp) / 2); font-size: var(--fs); line-height: 1.5; }
 /* How to book (Billy 2026-11-10): three steps, icons instead of numbers; same tile and spacing tokens */
 .steps-title { margin-top: var(--gap-near); font-size: var(--fs-sub); font-weight: var(--w-strong); }
 .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp); width: min(100%, 880px); margin: var(--sp) 0 0; padding: 0; list-style: none; }
