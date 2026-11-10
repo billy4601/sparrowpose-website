@@ -201,8 +201,8 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
 .contact-actions { display: flex; flex-direction: column; align-items: center; }
 /* LINE QR Code (Billy 2026-11-10): its own button opens a native popover (no JavaScript); desktop only, since a phone cannot scan its own screen */
 .pill-qr { display: none; }
-@media (min-width: 901px) and (hover: hover) { .pill-qr { display: inline-flex; } }
-.qr-pop { margin: auto; padding: var(--pad-card); border: 0; border-radius: var(--r-card); background: var(--card); color: var(--deep); text-align: center; box-shadow: 0 24px 64px rgba(11, 79, 85, .3); }
+@supports selector(:popover-open) { @media (min-width: 901px) and (hover: hover) { .pill-qr { display: inline-flex; } } }
+.qr-pop { display: none; margin: auto; padding: var(--pad-card); border: 0; border-radius: var(--r-card); background: var(--card); color: var(--deep); text-align: center; box-shadow: 0 24px 64px rgba(11, 79, 85, .3); }
 .qr-pop:popover-open { display: flex; flex-direction: column; align-items: center; gap: var(--sp); }
 .qr-pop::backdrop { background: rgba(11, 79, 85, .45); }
 .qr-card { margin: 0; }
