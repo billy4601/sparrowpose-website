@@ -218,6 +218,8 @@ body { line-break: strict; }  /* kinsoku: 。，」 never start a line */
 .steps .ico { background: rgba(255, 255, 255, .14); color: #FFFFFF; }
 .steps-note { margin-top: var(--sp); color: var(--text-2); }
 
+.hero-note { margin-top: calc(var(--sp) * 1.5); color: var(--text-2); }  /* brand transition note (Billy 2026-11-10) */
+
 /* 404 */
 .hero-brand { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: calc(var(--sp) * .4); font-size: calc(var(--fs-chapter) * .5); font-weight: var(--w-strong); letter-spacing: .1em; }
 .hero-brand .brand-en { font-size: var(--fs-sub); font-weight: var(--w-display); }
